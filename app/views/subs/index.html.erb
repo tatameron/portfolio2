@@ -1,0 +1,43 @@
+
+
+
+<div class="container">
+	<div class="row">
+
+		<div class="topics">
+			<div class="col-sm-3 sub2">
+		<%= link_to new_sub_path do %>
+                <button type="button" class="square_btn1">下請けを募集する</button>
+            <% end %>
+            <%= link_to new_con_path do %>
+                <button type="button" class="square_btn1">元請けを募集する</button>
+            <% end %>
+</div>
+
+<div class="col-sm-offset-4">
+			<div class="topicform">
+		<% @subs.each do |sub| %>
+
+						<div class="topics1">
+							<div class="posttitle"><%= link_to sub.title ,sub_path(sub.id) %>
+							</div>
+
+
+							<p class="mitumori"><b>見積もり希望</b></p>
+							<div class="taiou ">	<p>対応工事</p> <%= sub.job %>
+<p>現場住所</p><%= sub.address %></div>
+<%= attachment_image_tag sub.user, :profile_image, :fill, 40, 40, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg", :size => "40x40" %>
+
+<%= link_to sub_path(sub.id) do %>
+                <button type="button" class="square_btn3">詳細をみる</button>
+            <% end %>
+
+
+
+
+						</div>
+
+					<% end %>
+					</div>
+					</div>
+					</div></div></div>

@@ -1,0 +1,21 @@
+h1 = "#{@user.name }のタイムライン"
+                                                                                                                                                                        input#message-box[type="text"]
+input#send-btn[type="submit" value="送信"]
+
+table#chat-table
+
+coffee:
+
+  App.chat = App.cable.subscriptions.create "ChatChannel",
+    connected: ->
+
+    disconnected: ->
+
+    received: (data) ->
+      $('#chat-table').prepend("<tr><th>#{data.name}</th><td>#{data.content}</td></tr>")
+
+    new_message: (message) ->
+      @perform 'create_message', {message: message}
+
+  $('#send-btn').on 'click',  ->
+    App.chat.new_message $('#message-box').val()

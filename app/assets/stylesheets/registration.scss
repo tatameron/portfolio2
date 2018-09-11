@@ -1,0 +1,91 @@
+.form-group{
+	padding:5px;
+	width: 400px;
+	margin: auto;
+	text-align: center;
+}
+.remember{
+	margin-top:10px;
+}
+
+.button-group {
+	padding:5px;
+	width: 200px;
+	margin: auto;
+	text-align: center;
+}
+.kakoi{
+	padding:30px;
+	border:solid 1px gray;
+	margin:35px 0 100px;
+	border-radius: 1em;
+
+}
+.msr_bread07{
+  font-size: 20px;
+  letter-spacing: -.4em;
+  text-align: center;
+  margin-top: 15px;
+}
+.msr_bread07 li{
+  margin:0 5px 5px 0;
+  background:#404040;
+  color:#000;
+  line-height:100%;
+  letter-spacing: normal; 
+  display:inline-block;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+
+.msr_bread07 li a{
+	text-align: center;
+  padding:15px 200px 15px 80px;
+  color:white;
+  display:block;
+  position:relative;
+  z-index:1;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+
+/* 三角部分 */
+.msr_bread07 li a::before{
+  border: 14px solid transparent;
+  border-left: 14px solid #fff;
+  box-sizing: border-box;
+  content: "";
+  height: 28px;
+  width: 14px;
+  margin: -14px 0 0 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index:2;
+}
+.msr_bread07 li a::after{
+  border: 8px solid transparent;
+  border-left: 8px solid white;
+  box-sizing: border-box;
+  content: "";
+  height: 16px;
+  width: 8px;
+  margin: -8px 0 0 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index:3;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.jyunban{
+	margin:0 auto;
+}

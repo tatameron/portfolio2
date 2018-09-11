@@ -1,0 +1,61 @@
+
+
+
+
+
+<div class="topics">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-offset-1">
+<div class="information1">
+<div class="information2">
+自社情報</div>
+<%= form_for(@user) do |f| %>
+
+<div class="field">
+
+   <table class="table2">
+   <tr >
+          <td class="edit"><b>現在の画像</b></td>
+
+           <td class="edit">  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+          </td>
+        </tr>
+          <tr>
+          <td class="edit"><b>会社名</b></td>
+
+           <td> <%= @user.name %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>郵便番号</b></td>
+          <td> <%= @user.post %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>住所</b></td>
+          <td><%= @user.address %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>メールアドレス</b></td>
+          <td><%= @user.email %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>パスワード</b></td>
+          <td><%= @user.password %></td>
+        </tr>
+
+<tr>
+        <td class="edit"><b>退会</b></td>
+          <td><%= link_to "退会希望の方はこちら", user_registration_path, method: :delete, data: {confirm: '退会しますか？'} %></td>
+        </tr>
+      </table>
+        <% end %>
+        <div class="back2">
+         <%=button_to '編集', edit_user_path ,method: :get, class: 'btn btn-default ' %>
+        </div>
+        </div>
+</div>
+   </div>
+     </div>
+     </div>

@@ -1,0 +1,58 @@
+
+<div class="container">
+<div class="maintopic">
+	<div class="row">
+		<div class="topics">
+
+			<div class="col-sm-4 ">
+			<div class="topicform">
+				<%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
+				<div class="daimei">タイトル</div>
+				<%= f.text_area :title ,rows: 3 ,cols:40 %>
+				<div class="hondai">詳細</div>
+				<%= f.text_area :body ,rows: 10 ,cols:40%>
+				<br>
+				<input type="checkbox" value="1" name="topic[job]">下請け募集
+				<input type="checkbox" >元請け募集
+<br>
+<br>
+				<%= f.submit %>
+
+				<% end %>
+				</div>
+			</div>
+
+
+
+			<div class="col-sm-7">
+				<h3>職人募集や仕事探しの職人掲示板</h3>
+				職人募集や仕事探しの職人掲示板
+				建設業の職人さん向けの無料でご利用いただける掲示板です。 協力業者募集や求人、職人募集など、個別の工事や空き情報以外の用途に自由にお使いいただけます。 クロス職人、塗装職人、大工さん、リフォーム業者さん募集や元請け募集など毎日多くの書き込みが集まる職人掲示板です。
+
+
+
+					<% @topics.each do |topic| %>
+
+						<div class="topics1">
+							<div class="posttitle"><%= link_to topic.title, topics_show_path(topic.id) %></div>
+							<div class="postbody"> <%= topic.body %></div>
+
+
+<%= attachment_image_tag topic.user, :profile_image, :fill, 40, 40, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg", :size => "40x40" %>
+
+<%=link_to topic.user.name,user_path(topic.user.id)%>
+
+	<%= link_to  topics_show_path(topic.id) do %>
+                <button type="button" class="square_btn2">詳細をみる</button>
+            <% end %>
+
+</div>
+					<% end %>
+
+			</div>
+			</div>
+</div>
+		</div>
+	</div>
+</div>
+</div>

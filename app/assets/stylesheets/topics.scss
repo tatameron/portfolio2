@@ -1,0 +1,115 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.topics{
+	padding-top:80px;
+
+}
+.topics1{
+	border:solid 1px #bfbfbf;
+	margin:10px 0;
+	height:150px;
+	border-radius: 1em;
+	margin-top: 20px;
+}
+.topics2{
+	padding-bottom: 80px;
+}
+.posttitle{
+	font-size: 20px;
+	height: 40px;
+}
+.postbody{
+	font-size: 25px;
+	font-weight: lighter;
+	margin:5px 0 10px 15px;
+	height: 40px;
+}
+.showtitle{
+	font-size: 25px;
+}
+.showbody{
+	font-size: 20px;
+	margin:5px 0 10px 15px;
+}
+.showmain{
+
+	padding:10px;
+
+}
+.topicform{
+	width: 200px;
+margin-top: 20px;
+	border-radius: 1em;
+	height: 400px;
+	width:650px;
+}
+.maintopic{
+	margin-bottom:150px;
+}
+.topicform1{
+	width: 200px;
+margin-top: 20px;
+	border: solid 1px #bfbfbf;
+	border-radius: 1em;
+	height: 400px;
+	width:650px;
+}
+.daimei{
+	height: 30px;
+	width:302px;
+	background-color: #404040;
+	text-align: center;
+	color:white;
+	font-size: 20px;
+	line-height: 35px;
+
+}
+.hondai{
+	height: 30px;
+	width:302px;
+	text-align: center;
+	background-color: #404040;
+	color:white;
+	font-size: 20px;
+	line-height: 35px;
+}
+.comment{
+	padding-left:10px;
+	font-size: 20px;
+}
+.square_btn2 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535;/*背景色*/
+    border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    font-size:14px;
+    margin:0 5px 0 0;
+    width: 140px;
+    height: 40px;
+    float: right;
+    text-align: center;
+}
+
+.square_btn2:active {
+    border-bottom: solid 2px #fd9535;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.squareimage2{
+	text-align: center;
+}
+.modoru {
+	margin-top: 20px;
+	color:white;
+	background-color:black;
+}
+.newpost{
+	margin-top: 30px;
+}

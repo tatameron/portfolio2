@@ -1,0 +1,48 @@
+<div class="topics2">
+<div class="container">
+	<div class="row">
+		<div class="topics">
+
+		<div class="col-sm-3 sub2">
+		<%= link_to new_sub_path do %>
+                <button type="button" class="square_btn1">下請けを募集する</button>
+            <% end %>
+            <%= link_to new_con_path do %>
+                <button type="button" class="square_btn1">元請けを募集する</button>
+            <% end %>
+
+</div>
+<div class="col-sm-offset-4">
+			<div class="topicform">
+
+
+						<h3><%= @sub.title  %></h3>
+						<div>
+
+<ul>
+            <li>
+                <dl>
+                    <dt>工事内容</dt>
+                    <dd><%= @sub.body  %></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>現場住所</dt>
+                    <dd>
+                       <%= @sub.address  %>
+                    </dd>
+                </dl>
+            </li>
+           
+        </ul>
+
+
+
+
+						</div>
+</div>
+
+					</div>
+					</div>
+					</div></div></div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KNetWork</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+  <div>
+ <img src="/assets/logo.jpg" alt=" " class="col-sm-1 img4" />
+ <div class="head col-sm-1">
+ <%= link_to 'ホーム', root_path, class: "i far fa-star" %>
+ </div>
+ 
+  <div class="head col-sm-1">
+  <%= link_to '掲示板', topics_index_path, class: "i far fa-star" %>
+  </div>
+   <% if user_signed_in? %>
+   <div class="head col-sm-1">
+  <%= link_to 'マイページ', user_path(current_user), class: "i far fa-star" %>
+  <%end%>
+  </div>
+   <div class="head col-sm-1">
+  <%= link_to '下請け募集', subs_path, class: "i far fa-star" %>
+  </div>
+  <div class="head col-sm-1">
+  <%= link_to '元請け募集', cons_path, class: "i far fa-star" %>
+  </div>
+  <div class="head col-sm-2">
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "i far fa-star" %>
+  </div>
+
+</div></div></div>
+
+  </header>
+
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <footer>
+  <div class="footer1"></div>
+  <div class="footer2"></div>
+    
+  </footer>
+</html>

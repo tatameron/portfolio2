@@ -1,0 +1,55 @@
+
+<div class="topics">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-offset-1">
+<div class="information1">
+<div class="information2">
+自社情報編集</div>
+<%= form_for(@user) do |f| %>
+
+<div class="field">
+
+   <table class="table2">
+   <tr >
+          <td class="edit"><b>画像を変更する</b></td>
+
+           <td class="edit">  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+          <%= f.attachment_field :profile_image, placeholder: "プロフィール画像", class: "user-edit-form" %></td>
+        </tr>
+          <tr>
+          <td class="edit"><b>会社名</b></td>
+
+           <td> <%= f.text_field :name,:size=>"50" %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>郵便番号</b></td>
+          <td> <%= f.text_field :post,:size=>"50" %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>住所</b></td>
+          <td><%= f.text_field :address,:size=>"50" %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>メールアドレス</b></td>
+          <td><%= f.text_field :email,:size=>"50" %></td>
+        </tr>
+        <tr>
+        <td class="edit"><b>パスワード</b></td>
+          <td><%= f.text_field :password,:size=>"50" %></td>
+        </tr>
+
+
+      </table>
+<div class="clearfix back2">
+      <%= button_to '戻る', user_path, method: :get, class: 'btn btn-default botan1 back1' %>
+      <%= f.submit "保存", class: "btn btn-default  botan1 back3" %>
+      </div>
+        <% end %>
+        </div>
+</div>
+   </div>
+     </div>
+     </div>

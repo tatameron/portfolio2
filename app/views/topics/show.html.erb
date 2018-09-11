@@ -1,0 +1,47 @@
+<div class="topics2">
+<div class="container">
+	<div class="row">
+		<div class="topics">
+
+		<div class="col-sm-4">
+<h3>返信フォーム</h3>
+
+
+<%= form_for @newpost, :url => post_create_path do |f| %>
+  <div class="daimei">名前</div>
+  <p><%= f.text_area :name,rows: 1 ,cols:40%></p>
+  <div class="hondai">本文</div>
+  <p><%= f.text_area :body,rows: 10 ,cols:40 %></p>
+  <%= f.hidden_field :topic_id %>
+  <%= f.submit %>
+<% end %>
+</div>
+</div>
+<h3>個別スレッド詳細</h3>
+<hr>
+		<div class="col-sm-7">
+			<div class="topicform1">
+
+
+<div class="showmain">
+<div class="showtitle"><h1><%= @topic.title %></h1></div>
+<p class="showbody"><%= @topic.body %></p></div>
+<hr>
+<div class="comment">
+<% @posts.each_with_index do |post , idx| %>
+  <p>
+     <%= post.name %> : <%= post.body %>
+  </p>
+
+<% end %>
+</div>
+
+</div>
+</div>
+<%= link_to topics_index_path do %>
+                <button type="button" class="btn.btn_primary col-sm-3 col-sm-offset-6 modoru">スレッド一覧に戻る</button>
+            <% end %>
+</div>
+
+</div>
+</div>
